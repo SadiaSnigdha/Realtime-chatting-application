@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Group Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-header">
+            <h1>🗨️ Real-time Group Chat</h1>
+            <div class="connection-status" id="connectionStatus">
+                <span class="status-indicator"></span>
+                <span class="status-text">Connecting...</span>
+            </div>
+        </div>
+
+        
+        <div class="modal" id="usernameModal">
+            <div class="modal-content">
+                <h2>Welcome to the Chat!</h2>
+                <p>Please enter your username to continue:</p>
+                <div id="modalStatus" class="modal-status">Connecting to server...</div>
+                <input 
+                    type="text" 
+                    id="usernameInput" 
+                    placeholder="Enter your username" 
+                    maxlength="20"
+                    autofocus
+                />
+                <button id="joinButton" onclick="setUsername()" disabled>Join Chat</button>
+            </div>
+        </div>
+
+       
+        <div class="sidebar">
+            <h3>Online Users (<span id="userCount">0</span>)</h3>
+            <div class="online-users" id="onlineUsers">
+                <div class="user-item">Connecting...</div>
+            </div>
+        </div>
+
+        
+        <div class="chat-area">
+            <div class="messages" id="messages">
+                <div class="system-message">Connecting to server...</div>
+            </div>
+
+            <div class="input-area">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Type your message..." 
+                    disabled
+                />
+                <button id="sendButton" onclick="sendMessage()" disabled>Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>

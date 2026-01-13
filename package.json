@@ -1,0 +1,19 @@
+{
+  "name": "realtime-chat-app",
+  "version": "1.0.0",
+  "description": "Real-time group chat application using WebSocket",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "websocket",
+    "chat",
+    "realtime"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.14.2"
+  }
+}
